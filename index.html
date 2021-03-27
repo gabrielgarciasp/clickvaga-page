@@ -13,35 +13,43 @@
     />
 
     <style>
+      html {
+        font-size: 16px;
+      }
+
       body {
         font-family: "Ubuntu", sans-serif;
         margin: 0;
+        background-color: #eee;
       }
 
       main {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: flex-end;
-
-        background-color: #eee;
-        background-image: url("background.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
+        
         min-height: 100vh;
+        background: url("background.jpg") no-repeat center center fixed;
+        background-size: contain;
       }
 
       main a {
         display: inline-block;
         margin-bottom: 15px;
+        margin-right: 15px;
 
         background-color: #411c49;
         color: #f7ac4f;
         padding: 20px;
         text-decoration: none;
-        font-size: 2rem;
+        font-size: 1.5rem;
         border-radius: 30px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        html {
+          font-size: 12px;
+        }
       }
     </style>
   </head>
