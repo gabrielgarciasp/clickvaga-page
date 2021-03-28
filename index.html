@@ -15,40 +15,95 @@
     <style>
       html {
         font-size: 16px;
+        color: #bababa;
       }
 
       body {
         font-family: "Ubuntu", sans-serif;
         margin: 0;
-        background-color: #eee;
+        background-color: #1f1f1f;
       }
 
-      main {
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        
-        min-height: 100vh;
-        background: url("background.jpg") no-repeat center center fixed;
-        background-size: contain;
+      h2 {
+        font-size: 2rem;
+        margin: 15px 0;
       }
 
-      main a {
-        display: inline-block;
-        margin-bottom: 15px;
-        margin-right: 15px;
+      h3 {
+        font-size: 1.3rem;
+        margin: 15px 0;
+      }
 
-        background-color: #411c49;
-        color: #f7ac4f;
-        padding: 20px;
+      a {
         text-decoration: none;
+      }
+
+      main .container {
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      main .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1366px;
+        margin: 0 auto;
+      }
+
+      main .wrapper .wrapper-left {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      main .wrapper .wrapper-left img {
+        width: 100%;
+        max-width: 600px;
+      }
+
+      main .wrapper .wrapper-right {
+        flex: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .button {
+        display: inline-block;
+        background-color: #d766cd;
+        padding: 20px;
+        color: #1f1f1f;
         font-size: 1.5rem;
+        text-decoration: none;
         border-radius: 30px;
+        margin: 15px;
       }
 
       @media only screen and (max-width: 600px) {
         html {
           font-size: 12px;
+        }
+
+        main .wrapper {
+          flex-direction: column;
+        }
+
+        main .wrapper .wrapper-left {
+          width: 100%;
+        }
+
+        main .wrapper .wrapper-left img {
+          max-width: 65%;
+        }
+
+        main .wrapper .wrapper-right {
+          width: 90%;
+          text-align: center;
+          margin-top: 45px;
         }
       }
     </style>
@@ -56,7 +111,20 @@
 
   <body>
     <main>
-      <a href="#">Ir para <strong>Pesquisa</strong></a>
+      <div class="container">
+        <div class="wrapper">
+          <div class="wrapper-left">
+            <img src="background.png" alt="" />
+          </div>
+          <div class="wrapper-right">
+            <h2>Que tal participar de nossa pesquisa?</h2>
+            <h3>São poucas perguntas, mas de grande ajuda para nós!</h3>
+            <a href="https://forms.gle/dufb52o2AYqGmDC7A" class="button">
+              Ir para <strong>Pesquisa</strong>
+            </a>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>
