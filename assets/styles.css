@@ -147,12 +147,17 @@ main #section-time .container .wrapper .profiles .profile img {
     flex-direction: column;
   }
 
+  main #section-home .container .wrapper .wrapper-left {
+    margin-bottom: 45px;
+  }
+
   main #section-home .container .wrapper .wrapper-left img {
     max-width: 65%;
   }
 
   main #section-home .container .wrapper .wrapper-right {
     width: 90%;
+    margin-bottom: 45px;
   }
 
   /* --- TIME --- */
