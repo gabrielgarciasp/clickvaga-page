@@ -6,107 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ClickVaga - Você clicou, a vaga chegou.</title>
 
+    <link rel="stylesheet" href="assets/styles.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
-    <style>
-      html {
-        font-size: 16px;
-        color: #bababa;
-      }
-
-      body {
-        font-family: "Ubuntu", sans-serif;
-        margin: 0;
-        background-color: #1f1f1f;
-      }
-
-      h2 {
-        font-size: 2rem;
-        margin: 15px 0;
-      }
-
-      h3 {
-        font-size: 1.3rem;
-        margin: 15px 0;
-      }
-
-      a {
-        text-decoration: none;
-      }
-
-      main .container {
-        display: flex;
-        align-items: center;
-        min-height: 100vh;
-      }
-
-      main .wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 1366px;
-        margin: 0 auto;
-      }
-
-      main .wrapper .wrapper-left {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      main .wrapper .wrapper-left img {
-        width: 100%;
-        max-width: 600px;
-      }
-
-      main .wrapper .wrapper-right {
-        flex: 3;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-      }
-
-      .button {
-        display: inline-block;
-        background-color: #d766cd;
-        padding: 20px;
-        color: #1f1f1f;
-        font-size: 1.5rem;
-        text-decoration: none;
-        border-radius: 30px;
-        margin: 15px;
-      }
-
-      @media only screen and (max-width: 600px) {
-        html {
-          font-size: 12px;
-        }
-
-        main .wrapper {
-          flex-direction: column;
-        }
-
-        main .wrapper .wrapper-left {
-          width: 100%;
-        }
-
-        main .wrapper .wrapper-left img {
-          max-width: 65%;
-        }
-
-        main .wrapper .wrapper-right {
-          width: 90%;
-          text-align: center;
-          margin-top: 45px;
-        }
-      }
-    </style>
   </head>
 
   <body>
@@ -114,17 +19,37 @@
       <div class="container">
         <div class="wrapper">
           <div class="wrapper-left">
-            <img src="background.png" alt="" />
+            <h1>
+              <img
+                src="assets/background.png"
+                alt="Logotipo do Click Vaga com mensagem avisando que o site está em construção"
+              />
+            </h1>
           </div>
           <div class="wrapper-right">
             <h2>Que tal participar de nossa pesquisa?</h2>
             <h3>São poucas perguntas, mas de grande ajuda para nós!</h3>
-            <a href="https://forms.gle/dufb52o2AYqGmDC7A" class="button">
+            <a
+              href="https://forms.gle/dufb52o2AYqGmDC7A"
+              class="button"
+              title="Link para preencher pesquisa disponível em Google Forms"
+            >
               Ir para <strong>Pesquisa</strong>
             </a>
           </div>
         </div>
       </div>
     </main>
+
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    </script>
   </body>
 </html>
